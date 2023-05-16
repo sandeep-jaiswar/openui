@@ -1,0 +1,162 @@
+@mixin primary-bg() {
+  background-color: $primary-color;
+}
+
+@mixin primary-color() {
+  color: $white;
+}
+
+@mixin white-bg() {
+  background-color: $primary-color;
+}
+
+@mixin white-color() {
+  color: $white;
+}
+
+@mixin primary-border() {
+  border: 1px solid $primary-color;
+}
+
+@mixin primary-border-radius() {
+  border-radius: 4px;
+}
+
+@mixin primary-box-shadow() {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+@mixin primary-hover() {
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+@mixin primary-active() {
+  &:active {
+    background-color: darken($primary-color, 20%);
+  }
+}
+
+@mixin primary-focus() {
+  &:focus {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+@mixin primary-disabled() {
+  &:disabled {
+    background-color: lighten($primary-color, 20%);
+  }
+}
+
+@mixin primary() {
+  @include primary-bg;
+  @include primary-color;
+  @include primary-border;
+  @include primary-border-radius;
+  @include primary-box-shadow;
+  @include primary-hover;
+  @include primary-active;
+  @include primary-focus;
+  @include primary-disabled;
+}
+
+@mixin white() {
+  @include white-bg;
+  @include white-color;
+  @include primary-border;
+  @include primary-border-radius;
+  @include primary-box-shadow;
+  @include primary-hover;
+  @include primary-active;
+  @include primary-focus;
+  @include primary-disabled;
+}
+
+@mixin primary-outline() {
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  background-color: $white;
+  &:hover {
+    background-color: $primary-color;
+    color: $white;
+  }
+  &:active {
+    background-color: darken($primary-color, 20%);
+    color: $white;
+  }
+  &:focus {
+    background-color: $primary-color;
+    color: $white;
+  }
+  &:disabled {
+    background-color: lighten($primary-color, 20%);
+    color: $primary-color;
+  }
+}
+
+@mixin white-outline() {
+  border: 1px solid $white;
+  color: $white;
+  background-color: transparent;
+  &:hover {
+    background-color: $white;
+    color: $primary-color;
+  }
+  &:active {
+    background-color: darken($white, 20%);
+    color: $primary-color;
+  }
+  &:focus {
+    background-color: $white;
+    color: $primary-color;
+  }
+  &:disabled {
+    background-color: lighten($white, 20%);
+    color: $white;
+  }
+}
+
+@mixin primary-text() {
+  color: $primary-color;
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+  &:active {
+    color: darken($primary-color, 20%);
+  }
+  &:focus {
+    color: darken($primary-color, 10%);
+  }
+  &:disabled {
+    color: lighten($primary-color, 20%);
+  }
+}
+
+@mixin white-text() {
+  color: $white;
+  &:hover {
+    color: darken($white, 10%);
+  }
+  &:active {
+    color: darken($white, 20%);
+  }
+  &:focus {
+    color: darken($white, 10%);
+  }
+  &:disabled {
+    color: lighten($white, 20%);
+  }
+}
+
+@mixin available-width() {
+  width: 100%;
+  max-width: 100%;
+}
+
+@mixin loader(){
+  height: 100%;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}

@@ -1,1 +1,3 @@
-export { default as Button } from './components/Button';
+import './styles/base.scss';
+
+export * from './components';

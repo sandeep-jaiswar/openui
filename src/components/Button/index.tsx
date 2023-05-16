@@ -1,16 +1,17 @@
-//create genereric button component for my custom react component library
-
 import React from 'react';
 
 interface ButtonProps {
-    text: string;
-    onClick: () => void;
+    children: React.ReactNode;
+    className?: string;
+    onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ children, onClick, className }) => {
     return (
-        <button onClick={onClick}>
-            {text}
+        <button className={`flex items-center py-2 px-5 rounded-2xl ${className}`} onClick={onClick}>
+            <span className="flex items-center px-1 gap-2.5 w-full">
+                {children}
+            </span>
         </button>
     );
 };

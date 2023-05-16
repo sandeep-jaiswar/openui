@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./_variables.scss";
+@import "./_mixins.scss";
+@import "./grid.scss";
+
+button {
+  @include primary;
+  @media screen and (max-width: 768px) {
+    @include available-width;
+  }
+}
+
+.loader{
+  @include loader;
+  @media screen and (max-width: 768px) {
+    @include available-width;
+  }
+}
