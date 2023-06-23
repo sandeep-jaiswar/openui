@@ -1,3 +1,5 @@
 import './styles/base.scss';
 
-export * from './components';
+export {
+    Button
+} from './components';
